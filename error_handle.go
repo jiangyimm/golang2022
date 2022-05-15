@@ -21,8 +21,5 @@ func main() {
 
 func OpenFile(name string) (*os.File, error) {
 	file, err := os.Open(name)
-	if err != nil {
-		return file, err
-	}
-	return file, nil
+	return file, err
 }
