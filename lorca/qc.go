@@ -8,6 +8,10 @@ import (
 )
 
 //go build -ldflags "-H windowsgui"
+//start E:\gitlab-synyi\golang2022\lorca\lorca.exe ZY230417001
+//taskkill -t -f /im lorca.exe
+//taskkill -t -f /im lorca.exe & start E:\gitlab-synyi\golang2022\lorca\lorca.exe ZY230417001
+//taskkill -t -f /im lorca.exe & start E:\gitlab-synyi\golang2022\lorca\lorca.exe ZY230215002
 
 func main() {
 
@@ -46,4 +50,17 @@ func main() {
 
 	// Wait for the browser window to be closed
 	<-ui.Done()
+
+	// //合建chan
+	// c := make(chan os.Signal, 1)
+	// //监听所有信号
+	// signal.Notify(c)
+	// //阻塞直到有信号传入
+	// fmt.Println("启动")
+	// s := <-c
+	// ui.Close()
+	// fmt.Println("退出信号", s)
+
+	//os.Exit(run())
+
 }
