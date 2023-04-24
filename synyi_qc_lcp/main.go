@@ -36,7 +36,7 @@ func main() {
 
 	web_path = cur_apppath + "\\webview2"
 
-	//sy_log = cur_apppath + "\\resources\\Synyi-Logo.ico"
+	//sy_icon := cur_apppath + "\\resources\\Synyi-Logo.ico"
 
 	if e := godotenv.Load(); e != nil {
 		log.Fatal(e)
@@ -113,7 +113,7 @@ func newUI(inpatId string, emplCode string, hospCode string) {
 			Title:   "森亿病历内涵质控",
 			Width:   uint(qc_width),
 			Height:  uint(qc_height),
-			IconId:  0, // icon resource id
+			IconId:  2, // icon resource id
 			Center:  false,
 			Right:   uint(qc_right),
 			Top:     uint(qc_top),
