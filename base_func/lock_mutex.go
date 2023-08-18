@@ -11,14 +11,14 @@ func main() {
 	info.name = "123"
 
 	for i := 0; i < 10; i++ {
-		go Update(info, strconv.Itoa(i))
+		go info.Update(strconv.Itoa(i))
 	}
 
 	fmt.Printf("info.name: %v\n", info.name)
 
 }
 
-func Update(info *Info, name string) {
+func (info *Info) Update(name string) {
 	info.mu.Lock()
 	info.name = name
 	info.mu.Unlock()
